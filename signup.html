@@ -1,0 +1,214 @@
+<!-- IMP: styles for this file are in less/custom_COMPONENTS.less, and to see the changes
+you need to run these 2 commands in the terminal(to install and compile sass):
+1.  sudo npm install less -g
+2.  lessc less/style.less css/style.css
+
+Also, note that ess/custom_COMPONENTS.less is imported in  less/style.less
+-->
+
+<!-- google sign in : https://developers.google.com/identity/sign-in/web/build-button  -->
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome Screen</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-white container">
+    <!-- navbar  -->
+    <div class="navbar-wrapper pb-5">
+        <nav class="navbar navbar-fixed-top navbar-expand-md" role="navigation">
+            <div class="container">
+                <a class="navbar-brand" href=""><img class="img-fluid" id="logo" src="./img/COMPONENTS/website.png"
+                        alt=""></a>
+                <div class="navbar-header page-scroll">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end pr-0 mr-0" id="navbar">
+                    <ul id="right_items" class="nav navbar-nav navbar-right">
+                        <li><a class="nav-link page-scroll" href="#page-top">PRICING</a></li>
+                        <li><a class="nav-link page-scroll" href="#features">SIGN IN</a></li>
+                        <li><a class="nav-link page-scroll pt-2" href="#contact"> <button
+                                    class="btn btn-primary btn-sm">TRY FOR FREE</button></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- page content  -->
+    <div class="row features-block pt-sm-5">
+        <!-- left column  -->
+        <div class="col-lg-6 mt-sm-5 pt-5 features-text fadeInLeft">
+            <h1 class="pt-sm-5"><span class="text-green">Hello</span>, welcome <br> to our website</h1>
+            <p class="subtitle">Next generation Website</p>
+            <div class="d-flex pt-4 pb-2">
+                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#signInModal">SIGN IN</a>
+                <a href="" class="btn btn-primary ml-2" data-toggle="modal" data-target="#signUpModal">SIGN UP</a>
+
+                <!-- modal SING IN  -->
+                <div class="modal inmodal" id="signInModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content animated bounceInRight">
+                            <div class="modal-header">
+                                <div class="pb-2">
+                                    <h4 class="modal-title float-center">Sign in</h4>
+                                    <small class=" float-center">or <a href="">create account</a></small>
+                                </div>
+                                <!-- google login  -->
+                                <div class="row justify-content-center pt-5">
+                                    <div id="signin"> <img src="./img/COMPONENTS/signin.png" width="227" height="37"
+                                            alt=""></div>
+                                </div>
+                            </div>
+                            <!-- separating lines  -->
+                            <div class="row justify-content-center">
+                                <div class="Line-Copy-2"></div> <span class="px-3">or</span>
+                                <div class="Line-Copy-2">
+                                </div>
+                            </div>
+
+                            <div class="modal-body mt-2">
+                                <div class="row mx-auto w-50">
+                                    <form class="text-center  form-row" action="#!">
+                                        <!-- manually login  -->
+                                        <input type="email" class="form-control mb-4" placeholder="E-mail" required="">
+
+                                        <input type="password" class="form-control" placeholder="Password" required="">
+
+                                        <small class="form-control no-borders"> <a href=""><small>Forgot
+                                                    password?</small> </a></small>
+
+                                        <button class="btn btn-info my-4 btn-block w-50 mx-auto"
+                                            onclick="location.href='nemid.html'" type="submit">Sign in</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer no-borders">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- modal SING UP  -->
+                <div class="modal inmodal" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content animated bounceInRight">
+                            <div class="modal-header">
+                                <div class="pb-2">
+                                    <h4 class="modal-title float-center">Sign up</h4>
+                                </div>
+                                <!-- google signup  -->
+                                <div class="row justify-content-center pt-5">
+                                    <div id="signup"> <img src="./img/COMPONENTS/signup.png" width="227" height="37"
+                                            alt=""></div>
+                                </div>
+                            </div>
+
+                            <!-- separating lines  -->
+                            <div class="row justify-content-center">
+                                <div class="Line-Copy-2"></div> <span class="px-3">or</span>
+                                <div class="Line-Copy-2">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row mx-auto w-50">
+                                    <form class="text-center  form-row" action="#!">
+                                        <!-- manually signup  -->
+                                        <input type="email" class="form-control mb-4" placeholder="E-mail" required="">
+
+                                        <input type="password" class="form-control mb-4" placeholder="Password"
+                                            required="">
+
+                                        <input type="password" class="form-control" placeholder="Repeat password"
+                                            required="">
+                                        <button class="btn btn-info my-4 btn-block w-50 mx-auto"
+                                            onclick="location.href='nemid.html'" type="submit">Sign up</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer no-borders">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- right column  -->
+        <div class="col-lg-6 text-right pt-sm-5 fadeInRight pr-0 mr-0">
+            <img id="dashboard" src="img/COMPONENTS/white.png" alt="dashboard" class="img-fluid">
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- **************************************************************************** -->
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- **************************************************************************** -->
+
+
+</body>
+
+</html>
+
+<style>
+    /* modal styling  */
+
+
+    .Line-Copy-2 {
+        /* width: 160px; */
+        margin-top: 2%;
+        width: 29%;
+        height: 1px;
+        border: solid 0.6px #979797;
+    }
+
+    small a {
+        color: black;
+        text-decoration: underline;
+        padding-top: 0%;
+    }
+
+
+    #signin,
+    #signup {
+        border-radius: 2%;
+    }
+
+    .modal-header {
+        border-bottom: 0px solid #e9ecef;
+    }
+</style>
